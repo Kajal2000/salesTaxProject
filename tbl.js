@@ -7,6 +7,7 @@ knex.schema.createTable('products', (table) => {
     table.string('imported')
     table.string('category');
     table.float('price')
+    table.increments('id')
     }).then(()=>{
         console.log("table has created")
     }).catch((err) => {
