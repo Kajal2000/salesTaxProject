@@ -20,4 +20,10 @@ var cart_get_by_id = (cart_id) =>{
     .select("*")
     .where("cart.cart_id",cart_id)
 }
-module.exports = {insert_data,get_by_id,insert_data_cart,cart_get_by_id}
+
+var cart_get_by = (data_dic) =>{
+    return knex("cart")
+    .select("*")
+    .where("cart.cart_id",data_dic)
+}
+module.exports = {insert_data,get_by_id,insert_data_cart,cart_get_by_id,cart_get_by}
